@@ -1,13 +1,18 @@
 import React, { Component } from "react";
 
 // Api Call
-import { blogUrl } from "../apiCalls/blogs";
+import { blogUrl } from "../Api/blogs";
 
 export default class BlogDetail extends Component {
   state = {
-    blog: {},
+    blog:{},
   };
-  componentDidMount = async (match) => {
+
+  componentDidMount = () => {
+    this.fetchitems();
+  }
+
+  fetchitems = async () => {
     try {
       let data = await fetch(`${blogUrl}/blogs/${this.props.match.params.id}`);
       let result = await data.json();
@@ -16,16 +21,22 @@ export default class BlogDetail extends Component {
     } catch (error) {
       console.log(error);
     }
-  };
+  }
 
   render() {
-    let { author, title, imageUrl } = this.state.blog;
+    let { author, title, imageUrl, links } = this.state.blog;
     return (
       <div>
         <p>{author}</p>
         <img src={imageUrl} alt={author}  />
         <p>{title}</p>
-      </div>
-    );
+        {/* <p>{links}</p>
+         */}
+         {console.log(links[0])}
+        {/* {
+          this.state.blog.links.map(link=>console.log(link))
+        } */}
+        </div>
+    ); 
   }
 }

@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 // Api Call
-import { blogUrl } from "../apiCalls/blogs";
+import { blogUrl } from "../Api/blogs";
 
 // Component Import
-import Blog from "./Blog";
+import Blog from "../components/Blog";
 
 export default class Blogs extends Component {
   state = {
@@ -16,7 +16,7 @@ export default class Blogs extends Component {
       let data = await fetch(`${blogUrl}/blogs`);
       let result = await data.json();
       console.table(result);
-      this.setState({ blogs: result });
+      this.setState({ blogs: [...result] });
     } catch (error) {
       console.log(error);
     }
