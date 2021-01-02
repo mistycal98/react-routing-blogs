@@ -1,19 +1,15 @@
 import React, { Component } from "react";
 import logo from "../assets/logo.svg";
-import "../App.css";
+import styles from "./Nav.module.scss";
 
 import { Link } from "react-router-dom";
 
 export default class Nav extends Component {
-	style = {
-		height: "auto",
-		width: "120px",
-	};
 	render() {
 		return (
 			<nav>
-				<img style={this.style} src={logo} alt="Offcial logo" />
-				<ul className="links">
+				<img className={styles.img} src={logo} alt="Official logo" />
+				<ul className={styles.links}>
 					<Link to="/">
 						<li>Home</li>
 					</Link>

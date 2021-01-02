@@ -1,0 +1,23 @@
+.cards {
+	margin: 1rem;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.card {
+	width: 90%;
+	height: auto;
+	margin: 1rem;
+  border: 1px solid red;
+  .text{
+    color: black;
+  }
+	.imgUrl {
+		padding: 1rem;
+		width: 15rem;
+		height: auto;
+	}
+}
+
+
