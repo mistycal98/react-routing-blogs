@@ -1,11 +1,13 @@
-import React, { Component } from "react";
+import React, { Component, Suspense } from "react";
 
 export default class About extends Component {
-  render() {
-    return (
-      <div>
-        <h1>About page</h1>
-      </div>
-    );
-  }
+	render() {
+		return (
+			<div>
+				<Suspense fallback={<h1>Loading</h1>}>
+					<h1>About page</h1>
+				</Suspense>
+			</div>
+		);
+	}
 }
