@@ -1,11 +1,16 @@
 import React, { Component } from "react";
-
+import styles from "./Aside.module.scss";
 export default class Aside extends Component {
-	render() {
-		return (
-			<div>
-				<h1>Aside</h1>
-			</div>
-		);
-	}
+  render() {
+    let { links } = this.props;
+    return (
+      <div className={styles.links}>
+        {typeof links === "undefined" ? (
+          <h1>Loading</h1>
+        ) : (
+          links.map((link) => <p key={link.id}>{link.title}</p>)
+        )}
+      </div>
+    );
+  }
 }
