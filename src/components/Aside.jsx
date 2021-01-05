@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
+
 import styles from "./Aside.module.scss";
 export default class Aside extends Component {
   render() {
@@ -8,7 +10,11 @@ export default class Aside extends Component {
         {typeof links === "undefined" ? (
           <h1>Loading</h1>
         ) : (
-          links.map((link) => <p key={link.id}>{link.title}</p>)
+          links.map((link) => (
+            <Link to={`/blogs/${link.id}`} key={link.id}>
+              <p key={link.id}>{link.title}</p>
+            </Link>
+          ))
         )}
       </div>
     );

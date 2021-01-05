@@ -9,17 +9,18 @@ import About from "../pages/About";
 
 // Lazy Loading Components Using React.lazy
 // const About = React.lazy(() => import("../pages/About"));
+// const BlogDetails = React.lazy(() => import("../pages/BlogDetails"));
 
 //Styles import
 export default class BlogRoutes extends Component {
-	render() {
-		return (
-			<Switch>
-				<Route path="/" exact component={Home}></Route>
-				<Route path="/blogs" exact component={Blogs}></Route>
-				<Route path="/about" component={About}></Route>
-				<Route path="/blogs/:id" component={BlogDetails}></Route>
-			</Switch>
-		);
-	}
+  render() {
+    return (
+      <Switch>
+        <Route path='/' exact component={Home}></Route>
+        <Route path='/blogs' exact component={Blogs}></Route>
+        <Route path='/about' component={About}></Route>
+        <Route path='/blogs/:id' component={BlogDetails}></Route>
+      </Switch>
+    );
+  }
 }
