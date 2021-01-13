@@ -16,10 +16,10 @@ export default class BlogRoutes extends Component {
   render() {
     return (
       <Switch>
-        <Route path='/' exact component={Home}></Route>
-        <Route path='/blogs' exact component={Blogs}></Route>
-        <Route path='/about' component={About}></Route>
-        <Route path='/blogs/:id' component={BlogDetails}></Route>
+        <Route path="/" exact component={Home}></Route>
+        <Route path="/blogs" exact component={Blogs}></Route>
+        <Route path="/about" exact component={About}></Route>
+        <Route path="/blogs/:id" exact component={BlogDetails}></Route>
       </Switch>
     );
   }

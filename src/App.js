@@ -10,7 +10,7 @@ import styles from "./components/Body.module.scss";
 
 const App = () => {
 	return (
-		<div className="App">
+		<div className="main App">
 			<Nav />
 			<div className={styles.body}>
 				<BlogRoutes />
