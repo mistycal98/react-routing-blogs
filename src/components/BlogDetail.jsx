@@ -16,7 +16,7 @@ class BlogDetail extends Component {
         <div className={styles.blog}>
           <h1>{author}</h1>
           <img src={image} alt={title} />
-          <h1>{title}</h1>
+          <h2>{title}</h2>
           <p>{content}</p>
         </div>
         <div className={styles.aside}>

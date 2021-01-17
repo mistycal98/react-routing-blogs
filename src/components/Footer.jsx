@@ -1,12 +1,20 @@
-import React, { Component } from "react";
-import styles from "./Footer.module.scss";
+import React from "react";
+import style from "./Footer.module.scss";
 
-export default class Footer extends Component {
-	render() {
-		return (
-			<div className={styles.footer}>
-				<p className={styles["footer-info"]}>@CopyRight 2020</p>
+const Footer = () => {
+	return (
+		<div className={style.footer}>
+			<div>
+				<h1>Get in Touch ➜</h1>
+				<h4>CopyRight @ Tushar Mistry</h4>
 			</div>
-		);
-	}
-}
+			<div className={style.icon}>
+				<i className="fab fa-whatsapp fa-3x"></i>
+				<i className="fab fa-github fa-3x"></i>
+				<i class="far fa-envelope fa-3x"></i>
+			</div>
+		</div>
+	);
+};
+
+export default Footer;

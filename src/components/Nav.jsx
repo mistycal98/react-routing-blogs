@@ -1,18 +1,23 @@
 import React, { Component } from "react";
-import logo from "../assets/logo.svg";
+import logo from "../assets/50001008.5332ba36.png";
 import styles from "./Nav.module.scss";
 
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
+class Nav extends Component {
+	handleImageClick = (event) => {
+		console.log(this.props.history.push("/"));
+	};
 
-export default class Nav extends Component {
 	render() {
 		return (
 			<nav>
-				<img className={styles.img} src={logo} alt="Official logo" />
+				<img
+					onClick={this.handleImageClick}
+					className={styles.img}
+					src={logo}
+					alt="Official logo"
+				/>
 				<ul className={styles.links}>
-					<Link to="/">
-						<li>Home</li>
-					</Link>
 					<Link to="/blogs">
 						<li>Blogs</li>
 					</Link>
@@ -24,3 +29,5 @@ export default class Nav extends Component {
 		);
 	}
 }
+
+export default withRouter(Nav);

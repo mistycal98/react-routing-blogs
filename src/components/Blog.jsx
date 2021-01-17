@@ -6,7 +6,7 @@ export default class Blog extends Component {
 		let { author, id, imageUrl, title } = this.props;
 		return (
 			<div className={styles.card} key={id}>
-				<p className={styles.text}>{author}</p>
+				<h3 className={styles.text}>{author}</h3>
 				<img className={styles.imgUrl} src={imageUrl} alt={imageUrl} />
 				<p className={styles.text}>{title}</p>
 			</div>

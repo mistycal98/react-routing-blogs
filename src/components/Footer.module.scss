@@ -1,11 +1,14 @@
 .footer {
-  max-height: 10vh;
+  height: 10vh;
+  background-color: black;
   display: flex;
-  bottom: 0;
-  flex-grow: 1;
-  background: rgb(124, 131, 131);
-}
-
-.footer-info {
-  font-size: 1rem;
+  justify-content: space-around;
+  * {
+    margin: 0.1rem;
+    padding: 0 1rem;
+    color: white;
+  }
+  .icon {
+    margin: 0.2rem;
+  }
 }

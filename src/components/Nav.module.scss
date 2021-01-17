@@ -1,26 +1,25 @@
 nav {
-  padding: 1rem;
-  display: flex;
-  flex-grow: 1;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgb(124, 131, 131);
-  max-height: 10vh;
-  .img {
-    width: auto;
-    height: 4.5rem;
-  }
+	padding: 1rem;
+	display: flex;
+	flex: 1;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #000;
+	max-height: 10vh;
+	.img {
+		width: auto;
+		height: 4.5rem;
+	}
 }
 
 .links {
-  display: flex;
-  list-style: none;
-  justify-content: space-between;
-  li {
-    margin: 0 1rem;
-    color: black;
-  }
-  li:hover {
-    cursor: pointer;
-  }
+	display: flex;
+	list-style: none;
+	justify-content: space-between;
+	li {
+		margin: 0 1rem;
+	}
+	li:hover {
+		cursor: pointer;
+	}
 }
